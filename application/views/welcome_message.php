@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
 	<meta charset="utf-8">
-	<title>ALSKI</title>
+	<title>Monochorome Club</title>
+	<meta name="theme-color" content="#4286f4"/>
 
 	<style type="text/css">
 
@@ -11,7 +13,7 @@
 	::webkit-selection{ background-color: #E13300; color: white; }
 
 	body {
-		background-color: #fff;
+		 background-image: url("application/views/1.jpg");
 		margin: 10px;
 		font: 13px/20px normal Helvetica, Arial, sans-serif;
 		color: #4F5155;
@@ -20,11 +22,11 @@
 	a {
 		color: #fff;
 		background-color: blcak;
-		font-weight: 30px;
+		font-weight: 50px;
 		line-height: 30px;
 	}
 	a.sundaboy:visited {color:#fff;}
-	a.sundaboy:hover {color:#B0C4DE;}
+	a.sundaboy:hover {color:#000000;}
 
 	h1 {
 		color: #444;
@@ -64,20 +66,61 @@
 		border:#D0D0D0;
 		-webkit-box-shadow: 0 0 8px #D0D0D0;
 	}
-	
+	* {margin:0; padding:0;}
+ 
+ nav {
+ margin:auto;
+ text-align: center;
+ width: 100%;
+ font-family: arial;
+ } 
+ nav ul {
+ background:#000f0c;
+ padding: 0 20px;
+ list-style: none;
+ position: relative;
+ display: inline-table;
+ width: 100%;
+ }
+ nav ul li{
+ float:left;
+ }
+
+ nav ul li:hover{
+ background:#d8d0d1;
+ }
+
+ nav ul li:hover a{
+ color:#000;
+ }
+
+ nav ul li a{
+ display: block;
+ padding: 25px;
+ color: #fff;
+ text-decoration: none;
 	</style>
 </head>
 <body>
-<div id="container"><br>
-	<h1><center><b><font color=" #000000",size="7">[ MONO CLUB ]</font></b></center></h1><br>
-	<font size="4"><center>Haloha!! Kamu suka warna monochorome?? Gabung yuk di "MONO CLUB" dan isi datanya...</center></font><br><br>
+    <nav>
+    <ul>
+       <li><a href="<?php echo site_url('welcome/index')?>">Home</a></li>
+       <li><a href="<?php echo site_url('welcome/form_input')?>">Input Data</a></li>
+    </ul>
+</nav>
+<div id="container"><br><br>
+	<h1><b><font color=" #000000",size="7">[MONO CLUB]</font></b></h1><br><br>
+<font size="3">	Haloha!!<br>
+    Mono Club adalah suatu kelompok pecinta warna-warna monochorome.<br>
+    Apakah kamu juga? Yuk langsung saja bergabung dengan cara "Input Data" kamu : )<br><br></font>
 <div id="container">
+    <a class="sundaboy" href="<?php echo site_url('welcome/form_input')?>"><div style="background:#A9A9A9"><b>Input Data</b></div></a><br>
 	<table width="100%"  bgcolor="#fff" border="1" cellspacing="0">
-		<a align="right" class="sundaboy" href="<?php echo site_url('welcome/form_input')?>"><div style="background:black"><b>Input Your Data!!  </b></div></a><br>
-		<tr height="50px" style="background-color:#000000;">
+	    
+		<tr height="50px" style="background-color:#262323;">
 			<th width="30px"><center><b><p style="color:white">No</p></b></center></th>
 			<th width="200px"><center><b><p style="color:white">Nama</p></b></center></th>
-			<th width="90px"><center><b><p style="color:white">Angkatan</p></b></center></th>
+			<th width="90px"><center><b><p style="color:white">Tahun Masuk</p></b></center></th>
 			<th width="200px"><center><b><p style="color:white">Alamat</p></b></center></th>
 			<th width="50px"><center><b><p style="color:white">Opsi</p></b></center></th>
 			</tr>
@@ -89,7 +132,7 @@
 			<td><?php echo $r['nama_alumni']?></td>
 			<td><center><?php echo $r['angkatan']?></center></td>
 			<td><?php echo $r['alamat_alumni']?></td>
-			<td style="background-color: black;">
+			<td style="background-color: #696969;">
 				<a class="sundaboy" href="<?php echo site_url('welcome/form_edit/'.$r['id_alumni'])?>"><b>Edit</b></a><br>
 				<a class="sundaboy" href="<?php echo site_url('welcome/delete/'.$r['id_alumni'])?>" onclick="return confirm('Are you sure?!')"><b>Delete</b></a>
 			</td>
@@ -99,8 +142,8 @@
 <br>
 <br>
 	<div class="footer">
-        <center>Copyright &copy; 2018
-        Salsa Khairina</center>
+        <marquee></matquee><center>Copyright &copy; 2018
+        Salsa Khairina</center></marquee>
     </div>
 </body>
 </html>
